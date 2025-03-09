@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/components/about.sass'
+import AOS from 'aos'
 
 const About = () => {
+
+    useEffect(() => {
+            AOS.init();
+          }, [])
+
   return (
     <section id='about'>
-        <div className="content">
+        <div className="content" data-aos="zoom-in-up" data-aos-duration="1000">
             <h1>A <span>Empresa</span></h1>
             <p>
                 A Argon é uma empresa altamente comprometida com os seus clientes e encontrará a solução definitiva para o seu sistema de Refrigeração, Ar condicionado, Ventilação e Aquecimento.

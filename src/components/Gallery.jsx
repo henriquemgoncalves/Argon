@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../styles/components/gallery.sass'
 import  ImageGallery  from  "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+import AOS from 'aos'
 
 const images = [
     { 
@@ -67,10 +68,15 @@ const images = [
 ]
 
 const Gallery = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
   return (
     <section id='galeria'>
         <div className="overlay"></div>
-        <div className="content">
+        <div className="content" data-aos="zoom-in-up" data-aos-duration="1000">
             <div className="fotos">
                 <ImageGallery 
                     items={images}
@@ -80,6 +86,7 @@ const Gallery = () => {
                     showNav={false}
                     showPlayButton={false}
                     showFullscreenButton={false}
+                    showThumbnails={false}
                     additionalClass='custom-gallery'
                     renderItem={(image) => (
                         <img

@@ -45,8 +45,8 @@ const Contact = () => {
                     <li>Sábado : 8h-12h</li>
                 </ul>
                 <h3>Rua Manoel Pedro vilaboim, 245 - São Caetano do Sul/SP</h3>
-                <p>Tel: (11) 2668-5392</p>
-                <p>E-mail: argon.arcondicionado@gmail.com</p>
+                <p>(11) 2668-5392</p>
+                <p>argon.arcondicionado@gmail.com</p>
             </div>
             <div className="form">
                 <form id='' onSubmit={handleSubmit}>

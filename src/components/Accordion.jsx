@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Accordion from 'react-bootstrap/Accordion'
 import AccordionHeader from 'react-bootstrap/AccordionHeader'
 import '../styles/components/accordion.sass'
+import AOS from 'aos'
 
 
 const perguntas = [
@@ -33,13 +34,18 @@ const perguntas = [
 ]
 
 const AccordionSection = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
   return (
     <section id='perguntas'>
         <div className="content">
             <h1>Perguntas Frequentes</h1>
             <Accordion className='accordion p-4'>
                 {perguntas.map((pergunta) => (
-                <Accordion.Item key={pergunta.id} className='item' eventKey={pergunta.id}>
+                <Accordion.Item data-aos="zoom-out-right" key={pergunta.id} className='item' eventKey={pergunta.id}>
                     <AccordionHeader>{pergunta.title}</AccordionHeader>
                         <Accordion.Body>
                             {pergunta.description}
