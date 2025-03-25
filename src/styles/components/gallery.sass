@@ -56,17 +56,25 @@
                 color: #151515
                 padding: 1rem
 
-    @media ( max-width: 1000px )
+    @media ( max-width: 1190px )
         .content
             flex-direction: column-reverse
-            padding: 1rem
+            padding: 1.3rem
 
             .fotos
                 width: 100%
 
                 .image-gallery-slide
-                    height: 280px
+                    height: 450px
 
                 .text
                     p
                         padding: .5rem
+
+    @media ( max-width: 500px )
+        .content
+            padding: .5rem
+            
+            .fotos
+                .image-gallery-slide
+                    height: 300px
