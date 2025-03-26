@@ -22,7 +22,7 @@ const Footer = () => {
                 <h3>Desenvolvido por Henrique.</h3>
                 <div className="henrique-sociais">
                     <a 
-                        href="https://www.linkedin.com/in/henrique-madruga-gonçalves-044a072aa" 
+                        href="https://www.linkedin.com/in/henrique-madruga-gonçalves-2a7b91357" 
                         target='_blank'
                     >
                         <FaLinkedinIn />
